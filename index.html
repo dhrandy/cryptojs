@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Favorite Movies</title>
+  <title>Crypto Currency</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 
@@ -26,31 +26,10 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-    // The below code fills in the first row of the table
-    // var movie = "Mr. Nobody";
-    // var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+    
 
-    // $.ajax({
-    //   url: queryURL,
-    //   method: "GET"
-    // }).then(function(response) {
-    //   // Get reference to existing tbody element, create a new table row element
-    //   var tBody = $("tbody");
-    //   var tRow = $("<tr>");
-
-    //   // Methods run on jQuery selectors return the selector they we run on
-    //   // This is why we can create and save a reference to a td in the same statement we update its text
-    //   var titleTd = $("<td>").text(response.Title);
-    //   var yearTd = $("<td>").text(response.Year);
-    //   var actorsTd = $("<td>").text(response.Actors);
-    //   // Append the newly created table data to the table row
-    //   tRow.append(titleTd, yearTd, actorsTd);
-    //   // Append the table row to the table body
-    //   tBody.append(tRow);
-    // });
-
-    var movie= "BTC";
-    var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + movie + "&tsyms=USD";
+    var currency= "BTC";
+    var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + currency + "&tsyms=USD";
 
     $.ajax({
       url: queryURL,
@@ -60,17 +39,17 @@
       var tRow = $("<tr>");
       // Methods run on jQuery selectors return the selector they we run on
       // This is why we can create and save a reference to a td in the same statement we update its text
-      var titleTd = $("<td>").text(response.RAW.BTC.USD.FROMSYMBOL);
-      var yearTd = $("<td>").text(response.RAW.BTC.USD.PRICE);
-      var actorsTd = $("<td>").text(response.RAW.BTC.USD.OPENDAY);
+      var symbol = $("<td>").text(response.RAW.BTC.USD.FROMSYMBOL);
+      var price = $("<td>").text(response.RAW.BTC.USD.PRICE);
+      var openDay = $("<td>").text(response.RAW.BTC.USD.OPENDAY);
       // Append the newly created table data to the table row
-      tRow.append(titleTd, yearTd, actorsTd);
+      tRow.append(symbol, price, openDay);
       // Append the table row to the table body
       tBody.append(tRow);
     });
 
-    var movie= "ETH";
-    var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + movie + "&tsyms=USD";
+    var currency= "ETH";
+    var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + currency + "&tsyms=USD";
 
     $.ajax({
       url: queryURL,
@@ -80,17 +59,17 @@
       var tRow = $("<tr>");
       // Methods run on jQuery selectors return the selector they we run on
       // This is why we can create and save a reference to a td in the same statement we update its text
-      var titleTd = $("<td>").text(response.RAW.ETH.USD.FROMSYMBOL);
-      var yearTd = $("<td>").text(response.RAW.ETH.USD.PRICE);
-      var actorsTd = $("<td>").text(response.RAW.ETH.USD.OPENDAY);
+      var symbol = $("<td>").text(response.RAW.ETH.USD.FROMSYMBOL);
+      var price = $("<td>").text(response.RAW.ETH.USD.PRICE);
+      var openDay = $("<td>").text(response.RAW.ETH.USD.OPENDAY);
       // Append the newly created table data to the table row
-      tRow.append(titleTd, yearTd, actorsTd);
+      tRow.append(symbol, price, openDay);
       // Append the table row to the table body
       tBody.append(tRow);
     });
 
-    var movie= "XRP";
-    var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + movie + "&tsyms=USD";
+    var currency= "XRP";
+    var queryURL = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=" + currency + "&tsyms=USD";
 
     $.ajax({
       url: queryURL,
@@ -100,34 +79,14 @@
       var tRow = $("<tr>");
       // Methods run on jQuery selectors return the selector they we run on
       // This is why we can create and save a reference to a td in the same statement we update its text
-      var titleTd = $("<td>").text(response.RAW.XRP.USD.FROMSYMBOL);
-      var yearTd = $("<td>").text(response.RAW.XRP.USD.PRICE);
-      var actorsTd = $("<td>").text(response.RAW.XRP.USD.OPENDAY);
+      var symbol = $("<td>").text(response.RAW.XRP.USD.FROMSYMBOL);
+      var price = $("<td>").text(response.RAW.XRP.USD.PRICE);
+      var openDay = $("<td>").text(response.RAW.XRP.USD.OPENDAY);
       // Append the newly created table data to the table row
-      tRow.append(titleTd, yearTd, actorsTd);
+      tRow.append(symbol, price, openDay);
       // Append the table row to the table body
       tBody.append(tRow);
     });
-
-    // var movie = "The Lion King";
-    // var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-
-    // $.ajax({
-    //   url: queryURL,
-    //   method: "GET"
-    // }).then(function(response) {
-    //   var tBody = $("tbody");
-    //   var tRow = $("<tr>");
-    //   // Methods run on jQuery selectors return the selector they we run on
-    //   // This is why we can create and save a reference to a td in the same statement we update its text
-    //   var titleTd = $("<td>").text(response.Title);
-    //   var yearTd = $("<td>").text(response.Year);
-    //   var actorsTd = $("<td>").text(response.Actors);
-    //   // Append the newly created table data to the table row
-    //   tRow.append(titleTd, yearTd, actorsTd);
-    //   // Append the table row to the table body
-    //   tBody.append(tRow);
-    // });
   </script>
 </body>
 
